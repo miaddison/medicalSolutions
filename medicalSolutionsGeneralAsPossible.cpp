@@ -17,7 +17,10 @@ class Patient
 		string name, dateOfBirth, address, phoneNumber, currentMedications, height, weight, reasonForVisit, allergies;
 		int currentPainLevel;
 		bool safeInHome;
-	public:
+	public:/* some changes need to made to our data fields to reflect work done to normalize our data in the database some that jumped
+	out at me were: we have setAddress the database has address broke into several fields such as adddress, street, city, zipcode
+	name needs broken into first and last some other thoughts we should rename reasonForVisit or patientcomplaint to jive and I think we should 
+	have the c++ code generate patient ID */
 		Patient();
 		Patient(string,string,string,string,string,string,string,string,string,int,bool);
 		void setName(string n){name = n;}
