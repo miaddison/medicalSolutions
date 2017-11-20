@@ -506,7 +506,7 @@ namespace patientInput {
 			this->textBoxAllergies->Name = L"textBoxAllergies";
 			this->textBoxAllergies->Size = System::Drawing::Size(229, 72);
 			this->textBoxAllergies->TabIndex = 14;
-			this->textBoxAllergies->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox15_TextChanged);
+			//this->textBoxAllergies->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox15_TextChanged);
 			// 
 			// textBoxMedications
 			// 
@@ -535,6 +535,7 @@ namespace patientInput {
 			this->btnSubmit->TabIndex = 17;
 			this->btnSubmit->Text = L"Submit";
 			this->btnSubmit->UseVisualStyleBackColor = true;
+			this->btnSubmit->Click += gcnew System::EventHandler(this, &MyForm::btnSubmit_Click);
 			// 
 			// btnReset
 			// 
@@ -545,6 +546,7 @@ namespace patientInput {
 			this->btnReset->TabIndex = 18;
 			this->btnReset->Text = L"Reset";
 			this->btnReset->UseVisualStyleBackColor = true;
+			this->btnReset->Click += gcnew System::EventHandler(this, &MyForm::btnReset_Click);
 			// 
 			// MyForm
 			// 
@@ -606,8 +608,45 @@ namespace patientInput {
 
 		}
 #pragma endregion
-
-private: System::Void textBox15_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+// Form submit button click method
+private: System::Void btnSubmit_Click(System::Object^  sender, System::EventArgs^  e) {
+	// Submit Form Actions
 }
+
+// Clear all form text boxes
+private: System::Void Clear(){
+	// text boxes
+	// column one text boxes
+	this->textBoxFirstName->Text = "";
+	this->textBoxLastName->Text = "";
+	this->textBoxAddressStreet->Text = "";
+	this->textBoxAddressCity->Text = "";
+	this->textBoxAddressState->Text = "";
+	this->textBoxAddressZip->Text = "";
+	this->textBoxPhone->Text = "";
+	// column two text boxes
+	this->textBoxBirthdate->Text = "";
+	this->textBoxWeight->Text = "";
+	this->textBoxHeight->Text = "";
+	this->textBoxTemp->Text = "";
+	this->textBoxBP->Text = "";
+	this->textBoxPainLevel->Text = "";
+	this->textBoxSafeHome->Text = "";
+	// column three text boxes
+	this->textBoxAllergies->Text = "";
+	this->textBoxMedications->Text = "";
+	this->textBoxReasonVisit->Text = "";
+
+	this->btnSubmit->Enabled = true;
+	this->btnReset->Enabled = true;
+}
+
+// Form reset button click method
+private: System::Void btnReset_Click(System::Object^  sender, System::EventArgs^  e) {
+	Clear();
+}
+
+//private: System::Void textBox15_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+//}
 };
 }
