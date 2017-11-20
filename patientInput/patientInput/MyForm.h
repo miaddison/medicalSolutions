@@ -34,42 +34,30 @@ namespace patientInput {
 				delete components;
 			}
 		}
+	// labels
+	private: System::Windows::Forms::Label^  labelPatientInformation; 
+	 // column one labels
 	private: System::Windows::Forms::Label^  labelFirstName;
 	private: System::Windows::Forms::Label^  labelLastName;
-	private: System::Windows::Forms::Label^  labelBirthdate;
-	protected:
-
-	protected:
-
-
 	private: System::Windows::Forms::Label^  labelAdressStreet;
 	private: System::Windows::Forms::Label^  labelAddressCity;
 	private: System::Windows::Forms::Label^  labelAddressState;
 	private: System::Windows::Forms::Label^  labelAddressZip;
-	private: System::Windows::Forms::Label^  labelPhone;
-	private: System::Windows::Forms::Label^  labelMedications;
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^  labelPhone; 
+	// column two labels
+	private: System::Windows::Forms::Label^  labelBirthdate;
 	private: System::Windows::Forms::Label^  labelHeight;
 	private: System::Windows::Forms::Label^  labelWeight;
-	private: System::Windows::Forms::Label^  labelReasonVisit;
-
-
-
-	private: System::Windows::Forms::Label^  labelAllergies;
-
-	private: System::Windows::Forms::Label^  labelPainLevel;
-
+	private: System::Windows::Forms::Label^  labelTemp; 
 	private: System::Windows::Forms::Label^  labelBP;
-
-	private: System::Windows::Forms::Label^  labelTemp;
-	private: System::Windows::Forms::Label^  labelPatientInformation;
-
-
+	private: System::Windows::Forms::Label^  labelPainLevel;
+	private: System::Windows::Forms::Label^  labelSafeHome;
+	// column three labels
+	private: System::Windows::Forms::Label^  labelAllergies; 
+	private: System::Windows::Forms::Label^  labelMedications;
+	private: System::Windows::Forms::Label^  labelReasonVisit;
+	// text boxes
+	// column one text boxes
 	private: System::Windows::Forms::TextBox^  textBoxFirstName;
 	private: System::Windows::Forms::TextBox^  textBoxLastName;
 	private: System::Windows::Forms::TextBox^  textBoxAddressStreet;
@@ -77,40 +65,21 @@ namespace patientInput {
 	private: System::Windows::Forms::TextBox^  textBoxAddressState;
 	private: System::Windows::Forms::TextBox^  textBoxAddressZip;
 	private: System::Windows::Forms::TextBox^  textBoxPhone;
+	// column two text boxes
 	private: System::Windows::Forms::TextBox^  textBoxBirthdate;
-	private: System::Windows::Forms::Label^  labelSafeHome;
-
-
-
-
-
-
-
-
-
-	private: System::Windows::Forms::TextBox^  textBoxWeight;
-
 	private: System::Windows::Forms::TextBox^  textBoxHeight;
+	private: System::Windows::Forms::TextBox^  textBoxWeight;
 	private: System::Windows::Forms::TextBox^  textBoxTemp;
+	private: System::Windows::Forms::TextBox^  textBoxBP; 
 	private: System::Windows::Forms::TextBox^  textBoxPainLevel;
-
-
-
-	private: System::Windows::Forms::TextBox^  textBoxBP;
 	private: System::Windows::Forms::TextBox^  textBoxSafeHome;
-	private: System::Windows::Forms::TextBox^  textBoxAllergies;
+	// column three text boxes
+	private: System::Windows::Forms::TextBox^  textBoxAllergies; 
 	private: System::Windows::Forms::TextBox^  textBoxMedications;
 	private: System::Windows::Forms::TextBox^  textBoxReasonVisit;
-
-
-
-
-
+	// buttons
 	private: System::Windows::Forms::Button^  btnSubmit;
-
 	private: System::Windows::Forms::Button^  btnReset;
-
-
 
 	private:
 		/// <summary>
@@ -125,23 +94,30 @@ namespace patientInput {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			// labels
+			this->labelPatientInformation = (gcnew System::Windows::Forms::Label());
+			// column one labels
 			this->labelFirstName = (gcnew System::Windows::Forms::Label());
 			this->labelLastName = (gcnew System::Windows::Forms::Label());
-			this->labelBirthdate = (gcnew System::Windows::Forms::Label());
 			this->labelAdressStreet = (gcnew System::Windows::Forms::Label());
 			this->labelAddressCity = (gcnew System::Windows::Forms::Label());
 			this->labelAddressState = (gcnew System::Windows::Forms::Label());
 			this->labelAddressZip = (gcnew System::Windows::Forms::Label());
 			this->labelPhone = (gcnew System::Windows::Forms::Label());
-			this->labelMedications = (gcnew System::Windows::Forms::Label());
+			// column two labels
+			this->labelBirthdate = (gcnew System::Windows::Forms::Label());
 			this->labelHeight = (gcnew System::Windows::Forms::Label());
 			this->labelWeight = (gcnew System::Windows::Forms::Label());
-			this->labelReasonVisit = (gcnew System::Windows::Forms::Label());
-			this->labelAllergies = (gcnew System::Windows::Forms::Label());
-			this->labelPainLevel = (gcnew System::Windows::Forms::Label());
-			this->labelBP = (gcnew System::Windows::Forms::Label());
 			this->labelTemp = (gcnew System::Windows::Forms::Label());
-			this->labelPatientInformation = (gcnew System::Windows::Forms::Label());
+			this->labelBP = (gcnew System::Windows::Forms::Label());
+			this->labelPainLevel = (gcnew System::Windows::Forms::Label());
+			this->labelSafeHome = (gcnew System::Windows::Forms::Label());
+			// column three labels
+			this->labelAllergies = (gcnew System::Windows::Forms::Label());
+			this->labelMedications = (gcnew System::Windows::Forms::Label());
+			this->labelReasonVisit = (gcnew System::Windows::Forms::Label());
+			// text boxes
+			// column one text boxes
 			this->textBoxFirstName = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxLastName = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxAddressStreet = (gcnew System::Windows::Forms::TextBox());
@@ -149,20 +125,34 @@ namespace patientInput {
 			this->textBoxAddressState = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxAddressZip = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxPhone = (gcnew System::Windows::Forms::TextBox());
+			// column two text boxes
 			this->textBoxBirthdate = (gcnew System::Windows::Forms::TextBox());
-			this->labelSafeHome = (gcnew System::Windows::Forms::Label());
 			this->textBoxWeight = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxHeight = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxTemp = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxPainLevel = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxBP = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxPainLevel = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxSafeHome = (gcnew System::Windows::Forms::TextBox());
+			// column three text boxes
 			this->textBoxAllergies = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxMedications = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxReasonVisit = (gcnew System::Windows::Forms::TextBox());
+			//buttons
 			this->btnSubmit = (gcnew System::Windows::Forms::Button());
 			this->btnReset = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
+			// 
+			// labelPatientInformation
+			// 
+			this->labelPatientInformation->AutoSize = true;
+			this->labelPatientInformation->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 23, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelPatientInformation->Location = System::Drawing::Point(365, 24);
+			this->labelPatientInformation->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelPatientInformation->Name = L"labelPatientInformation";
+			this->labelPatientInformation->Size = System::Drawing::Size(273, 35);
+			this->labelPatientInformation->TabIndex = 16;
+			this->labelPatientInformation->Text = L"Patient Information";
 			// 
 			// labelFirstName
 			// 
@@ -187,18 +177,6 @@ namespace patientInput {
 			this->labelLastName->Size = System::Drawing::Size(90, 20);
 			this->labelLastName->TabIndex = 1;
 			this->labelLastName->Text = L"Last Name:";
-			// 
-			// labelBirthdate
-			// 
-			this->labelBirthdate->AutoSize = true;
-			this->labelBirthdate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelBirthdate->Location = System::Drawing::Point(330, 110);
-			this->labelBirthdate->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelBirthdate->Name = L"labelBirthdate";
-			this->labelBirthdate->Size = System::Drawing::Size(78, 20);
-			this->labelBirthdate->TabIndex = 2;
-			this->labelBirthdate->Text = L"Birthdate:";
 			// 
 			// labelAdressStreet
 			// 
@@ -260,17 +238,17 @@ namespace patientInput {
 			this->labelPhone->TabIndex = 7;
 			this->labelPhone->Text = L"Phone:";
 			// 
-			// labelMedications
+			// labelBirthdate
 			// 
-			this->labelMedications->AutoSize = true;
-			this->labelMedications->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelBirthdate->AutoSize = true;
+			this->labelBirthdate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelMedications->Location = System::Drawing::Point(672, 213);
-			this->labelMedications->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelMedications->Name = L"labelMedications";
-			this->labelMedications->Size = System::Drawing::Size(155, 20);
-			this->labelMedications->TabIndex = 8;
-			this->labelMedications->Text = L"Current Medications:";
+			this->labelBirthdate->Location = System::Drawing::Point(330, 110);
+			this->labelBirthdate->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelBirthdate->Name = L"labelBirthdate";
+			this->labelBirthdate->Size = System::Drawing::Size(78, 20);
+			this->labelBirthdate->TabIndex = 2;
+			this->labelBirthdate->Text = L"Birthdate:";
 			// 
 			// labelHeight
 			// 
@@ -296,41 +274,17 @@ namespace patientInput {
 			this->labelWeight->TabIndex = 10;
 			this->labelWeight->Text = L"Weight:";
 			// 
-			// labelReasonVisit
+			// labelTemp
 			// 
-			this->labelReasonVisit->AutoSize = true;
-			this->labelReasonVisit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelTemp->AutoSize = true;
+			this->labelTemp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelReasonVisit->Location = System::Drawing::Point(672, 309);
-			this->labelReasonVisit->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelReasonVisit->Name = L"labelReasonVisit";
-			this->labelReasonVisit->Size = System::Drawing::Size(126, 20);
-			this->labelReasonVisit->TabIndex = 11;
-			this->labelReasonVisit->Text = L"Reason for Visit:";
-			// 
-			// labelAllergies
-			// 
-			this->labelAllergies->AutoSize = true;
-			this->labelAllergies->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelAllergies->Location = System::Drawing::Point(672, 110);
-			this->labelAllergies->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelAllergies->Name = L"labelAllergies";
-			this->labelAllergies->Size = System::Drawing::Size(73, 20);
-			this->labelAllergies->TabIndex = 12;
-			this->labelAllergies->Text = L"Allergies:";
-			// 
-			// labelPainLevel
-			// 
-			this->labelPainLevel->AutoSize = true;
-			this->labelPainLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelPainLevel->Location = System::Drawing::Point(330, 316);
-			this->labelPainLevel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelPainLevel->Name = L"labelPainLevel";
-			this->labelPainLevel->Size = System::Drawing::Size(85, 20);
-			this->labelPainLevel->TabIndex = 13;
-			this->labelPainLevel->Text = L"Pain Level:";
+			this->labelTemp->Location = System::Drawing::Point(330, 233);
+			this->labelTemp->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelTemp->Name = L"labelTemp";
+			this->labelTemp->Size = System::Drawing::Size(104, 20);
+			this->labelTemp->TabIndex = 15;
+			this->labelTemp->Text = L"Temperature:";
 			// 
 			// labelBP
 			// 
@@ -344,29 +298,65 @@ namespace patientInput {
 			this->labelBP->TabIndex = 14;
 			this->labelBP->Text = L"Blood Pressure:";
 			// 
-			// labelTemp
+			// labelPainLevel
 			// 
-			this->labelTemp->AutoSize = true;
-			this->labelTemp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelPainLevel->AutoSize = true;
+			this->labelPainLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelTemp->Location = System::Drawing::Point(330, 233);
-			this->labelTemp->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelTemp->Name = L"labelTemp";
-			this->labelTemp->Size = System::Drawing::Size(104, 20);
-			this->labelTemp->TabIndex = 15;
-			this->labelTemp->Text = L"Temperature:";
+			this->labelPainLevel->Location = System::Drawing::Point(330, 316);
+			this->labelPainLevel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelPainLevel->Name = L"labelPainLevel";
+			this->labelPainLevel->Size = System::Drawing::Size(85, 20);
+			this->labelPainLevel->TabIndex = 13;
+			this->labelPainLevel->Text = L"Pain Level:";
 			// 
-			// labelPatientInformation
+			// labelSafeHome
 			// 
-			this->labelPatientInformation->AutoSize = true;
-			this->labelPatientInformation->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 23, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->labelPatientInformation->Location = System::Drawing::Point(365, 24);
-			this->labelPatientInformation->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelPatientInformation->Name = L"labelPatientInformation";
-			this->labelPatientInformation->Size = System::Drawing::Size(273, 35);
-			this->labelPatientInformation->TabIndex = 16;
-			this->labelPatientInformation->Text = L"Patient Information";
+			this->labelSafeHome->AutoSize = true;
+			this->labelSafeHome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelSafeHome->Location = System::Drawing::Point(330, 361);
+			this->labelSafeHome->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelSafeHome->Name = L"labelSafeHome";
+			this->labelSafeHome->Size = System::Drawing::Size(110, 20);
+			this->labelSafeHome->TabIndex = 25;
+			this->labelSafeHome->Text = L"Safe in Home:";
+			// 
+			// labelAllergies
+			// 
+			this->labelAllergies->AutoSize = true;
+			this->labelAllergies->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelAllergies->Location = System::Drawing::Point(672, 110);
+			this->labelAllergies->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelAllergies->Name = L"labelAllergies";
+			this->labelAllergies->Size = System::Drawing::Size(73, 20);
+			this->labelAllergies->TabIndex = 12;
+			this->labelAllergies->Text = L"Allergies:";
+			// 
+			// labelMedications
+			// 
+			this->labelMedications->AutoSize = true;
+			this->labelMedications->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelMedications->Location = System::Drawing::Point(672, 213);
+			this->labelMedications->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelMedications->Name = L"labelMedications";
+			this->labelMedications->Size = System::Drawing::Size(155, 20);
+			this->labelMedications->TabIndex = 8;
+			this->labelMedications->Text = L"Current Medications:";
+			// 
+			// labelReasonVisit
+			// 
+			this->labelReasonVisit->AutoSize = true;
+			this->labelReasonVisit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelReasonVisit->Location = System::Drawing::Point(672, 309);
+			this->labelReasonVisit->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelReasonVisit->Name = L"labelReasonVisit";
+			this->labelReasonVisit->Size = System::Drawing::Size(126, 20);
+			this->labelReasonVisit->TabIndex = 11;
+			this->labelReasonVisit->Text = L"Reason for Visit:";
 			// 
 			// textBoxFirstName
 			// 
@@ -448,17 +438,15 @@ namespace patientInput {
 			this->textBoxBirthdate->Size = System::Drawing::Size(150, 26);
 			this->textBoxBirthdate->TabIndex = 7;
 			// 
-			// labelSafeHome
+			// textBoxHeight
 			// 
-			this->labelSafeHome->AutoSize = true;
-			this->labelSafeHome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBoxHeight->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelSafeHome->Location = System::Drawing::Point(330, 361);
-			this->labelSafeHome->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelSafeHome->Name = L"labelSafeHome";
-			this->labelSafeHome->Size = System::Drawing::Size(110, 20);
-			this->labelSafeHome->TabIndex = 25;
-			this->labelSafeHome->Text = L"Safe in Home:";
+			this->textBoxHeight->Location = System::Drawing::Point(479, 149);
+			this->textBoxHeight->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->textBoxHeight->Name = L"textBoxHeight";
+			this->textBoxHeight->Size = System::Drawing::Size(150, 26);
+			this->textBoxHeight->TabIndex = 8;
 			// 
 			// textBoxWeight
 			// 
@@ -470,16 +458,6 @@ namespace patientInput {
 			this->textBoxWeight->Size = System::Drawing::Size(150, 26);
 			this->textBoxWeight->TabIndex = 9;
 			// 
-			// textBoxHeight
-			// 
-			this->textBoxHeight->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBoxHeight->Location = System::Drawing::Point(479, 149);
-			this->textBoxHeight->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->textBoxHeight->Name = L"textBoxHeight";
-			this->textBoxHeight->Size = System::Drawing::Size(150, 26);
-			this->textBoxHeight->TabIndex = 8;
-			// 
 			// textBoxTemp
 			// 
 			this->textBoxTemp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -490,16 +468,6 @@ namespace patientInput {
 			this->textBoxTemp->Size = System::Drawing::Size(150, 26);
 			this->textBoxTemp->TabIndex = 10;
 			// 
-			// textBoxPainLevel
-			// 
-			this->textBoxPainLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBoxPainLevel->Location = System::Drawing::Point(479, 316);
-			this->textBoxPainLevel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->textBoxPainLevel->Name = L"textBoxPainLevel";
-			this->textBoxPainLevel->Size = System::Drawing::Size(150, 26);
-			this->textBoxPainLevel->TabIndex = 12;
-			// 
 			// textBoxBP
 			// 
 			this->textBoxBP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -509,6 +477,16 @@ namespace patientInput {
 			this->textBoxBP->Name = L"textBoxBP";
 			this->textBoxBP->Size = System::Drawing::Size(150, 26);
 			this->textBoxBP->TabIndex = 11;
+			// 
+			// textBoxPainLevel
+			// 
+			this->textBoxPainLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBoxPainLevel->Location = System::Drawing::Point(479, 316);
+			this->textBoxPainLevel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->textBoxPainLevel->Name = L"textBoxPainLevel";
+			this->textBoxPainLevel->Size = System::Drawing::Size(150, 26);
+			this->textBoxPainLevel->TabIndex = 12;
 			// 
 			// textBoxSafeHome
 			// 
@@ -573,43 +551,53 @@ namespace patientInput {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(988, 450);
-			this->Controls->Add(this->btnReset);
-			this->Controls->Add(this->btnSubmit);
-			this->Controls->Add(this->textBoxReasonVisit);
-			this->Controls->Add(this->textBoxMedications);
-			this->Controls->Add(this->textBoxAllergies);
-			this->Controls->Add(this->textBoxSafeHome);
-			this->Controls->Add(this->textBoxBP);
-			this->Controls->Add(this->textBoxPainLevel);
-			this->Controls->Add(this->textBoxTemp);
-			this->Controls->Add(this->textBoxHeight);
-			this->Controls->Add(this->textBoxWeight);
-			this->Controls->Add(this->labelSafeHome);
-			this->Controls->Add(this->textBoxBirthdate);
-			this->Controls->Add(this->textBoxPhone);
-			this->Controls->Add(this->textBoxAddressZip);
-			this->Controls->Add(this->textBoxAddressState);
-			this->Controls->Add(this->textBoxAddressCity);
-			this->Controls->Add(this->textBoxAddressStreet);
-			this->Controls->Add(this->textBoxLastName);
-			this->Controls->Add(this->textBoxFirstName);
+			// labels
 			this->Controls->Add(this->labelPatientInformation);
+			// column one labels
+			this->Controls->Add(this->labelFirstName); 
+			this->Controls->Add(this->labelLastName); 
+			this->Controls->Add(this->labelAdressStreet); 
+			this->Controls->Add(this->labelAddressCity);
+			this->Controls->Add(this->labelAddressState);
+			this->Controls->Add(this->labelAddressZip);
+			this->Controls->Add(this->labelPhone);
+			// column two labels
+			this->Controls->Add(this->labelBirthdate);
+			this->Controls->Add(this->labelHeight);
+			this->Controls->Add(this->labelWeight);
 			this->Controls->Add(this->labelTemp);
 			this->Controls->Add(this->labelBP);
 			this->Controls->Add(this->labelPainLevel);
+			this->Controls->Add(this->labelSafeHome);
+			// colomn three labels
 			this->Controls->Add(this->labelAllergies);
-			this->Controls->Add(this->labelReasonVisit);
-			this->Controls->Add(this->labelWeight);
-			this->Controls->Add(this->labelHeight);
 			this->Controls->Add(this->labelMedications);
-			this->Controls->Add(this->labelPhone);
-			this->Controls->Add(this->labelAddressZip);
-			this->Controls->Add(this->labelAddressState);
-			this->Controls->Add(this->labelAddressCity);
-			this->Controls->Add(this->labelAdressStreet);
-			this->Controls->Add(this->labelBirthdate);
-			this->Controls->Add(this->labelLastName);
-			this->Controls->Add(this->labelFirstName);
+			this->Controls->Add(this->labelReasonVisit);
+			// text boxes
+			// column one text boxes
+			this->Controls->Add(this->textBoxFirstName);
+			this->Controls->Add(this->textBoxLastName);
+			this->Controls->Add(this->textBoxAddressStreet);
+			this->Controls->Add(this->textBoxAddressCity);
+			this->Controls->Add(this->textBoxAddressState);
+			this->Controls->Add(this->textBoxAddressZip);
+			this->Controls->Add(this->textBoxPhone);
+			// column two text boxes
+			this->Controls->Add(this->textBoxBirthdate);
+			this->Controls->Add(this->textBoxHeight);
+			this->Controls->Add(this->textBoxWeight);
+			this->Controls->Add(this->textBoxTemp);
+			this->Controls->Add(this->textBoxBP);
+			this->Controls->Add(this->textBoxPainLevel);
+			this->Controls->Add(this->textBoxSafeHome);
+			// column three text boxes
+			this->Controls->Add(this->textBoxAllergies);
+			this->Controls->Add(this->textBoxMedications);
+			this->Controls->Add(this->textBoxReasonVisit);
+			// buttons
+			this->Controls->Add(this->btnSubmit);
+			this->Controls->Add(this->btnReset);
+			
 			this->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->Name = L"MyForm";
 			this->Text = L"Patient Information";
