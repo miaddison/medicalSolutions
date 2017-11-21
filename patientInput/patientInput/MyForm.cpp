@@ -16,3 +16,8 @@ int main(array<System::String ^> ^args)
 	Application::Run(gcnew MyForm());
 	return 0;
 }
+
+firstPatient->patientInput::MyForm::printPatient(firstPatient)
+{
+	return firstPatient ->();
+}
