@@ -1,4 +1,2 @@
-﻿  MyForm.cpp
-  MyForm.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  patientInput.vcxproj -> \\vmware-host\Shared Folders\Documents\DMACC_Courses\CIS164AdvancedC++\medicalSolutions\git\patientInput\x64\Debug\patientInput.exe
-  patientInput.vcxproj -> \\vmware-host\Shared Folders\Documents\DMACC_Courses\CIS164AdvancedC++\medicalSolutions\git\patientInput\x64\Debug\patientInput.pdb (Partial PDB)
+﻿  patientInput.vcxproj -> C:\DMACC\Fall 2017\Adv. C++\medicalSolutions-miaddison-3\patientInput\x64\Debug\patientInput.exe
+  patientInput.vcxproj -> C:\DMACC\Fall 2017\Adv. C++\medicalSolutions-miaddison-3\patientInput\x64\Debug\patientInput.pdb (Partial PDB)

@@ -1,19 +1,20 @@
+#include "Patient.h"
 #pragma once
+#include <msclr\marshal_cppstd.h>
 
 namespace patientInput {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
-	{
+	public ref class MyForm : public System::Windows::Forms::Form{
+
 	public:
 		MyForm(void)
 		{
@@ -21,12 +22,12 @@ namespace patientInput {
 			//
 			//TODO: Add the constructor code here
 			//
-		}
-
+		}	
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
+		
 		~MyForm()
 		{
 			if (components)
@@ -34,26 +35,27 @@ namespace patientInput {
 				delete components;
 			}
 		}
+
 	// labels
-	private: System::Windows::Forms::Label^  labelPatientInformation; 
-	 // column one labels
+	private: System::Windows::Forms::Label^  labelPatientInformation;
+	// column one labels
 	private: System::Windows::Forms::Label^  labelFirstName;
 	private: System::Windows::Forms::Label^  labelLastName;
 	private: System::Windows::Forms::Label^  labelAdressStreet;
 	private: System::Windows::Forms::Label^  labelAddressCity;
 	private: System::Windows::Forms::Label^  labelAddressState;
 	private: System::Windows::Forms::Label^  labelAddressZip;
-	private: System::Windows::Forms::Label^  labelPhone; 
-	// column two labels
+	private: System::Windows::Forms::Label^  labelPhone;
+	 // column two labels
 	private: System::Windows::Forms::Label^  labelBirthdate;
 	private: System::Windows::Forms::Label^  labelHeight;
 	private: System::Windows::Forms::Label^  labelWeight;
-	private: System::Windows::Forms::Label^  labelTemp; 
+	private: System::Windows::Forms::Label^  labelTemp;
 	private: System::Windows::Forms::Label^  labelBP;
 	private: System::Windows::Forms::Label^  labelPainLevel;
 	private: System::Windows::Forms::Label^  labelSafeHome;
 	// column three labels
-	private: System::Windows::Forms::Label^  labelAllergies; 
+	private: System::Windows::Forms::Label^  labelAllergies;
 	private: System::Windows::Forms::Label^  labelMedications;
 	private: System::Windows::Forms::Label^  labelReasonVisit;
 	// text boxes
@@ -70,33 +72,30 @@ namespace patientInput {
 	private: System::Windows::Forms::TextBox^  textBoxHeight;
 	private: System::Windows::Forms::TextBox^  textBoxWeight;
 	private: System::Windows::Forms::TextBox^  textBoxTemp;
-	private: System::Windows::Forms::TextBox^  textBoxBP; 
+	private: System::Windows::Forms::TextBox^  textBoxBP;
 	private: System::Windows::Forms::TextBox^  textBoxPainLevel;
-	private: System::Windows::Forms::TextBox^  textBoxSafeHome;
+	private: System::Windows::Forms::TextBox^  textBoxSafeHome;		 
 	// column three text boxes
-	private: System::Windows::Forms::TextBox^  textBoxAllergies; 
+	private: System::Windows::Forms::TextBox^  textBoxAllergies;
 	private: System::Windows::Forms::TextBox^  textBoxMedications;
 	private: System::Windows::Forms::TextBox^  textBoxReasonVisit;
 	// buttons
 	private: System::Windows::Forms::Button^  btnSubmit;
 	private: System::Windows::Forms::Button^  btnReset;
-
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+	/// <summary>
+	/// Required designer variable.
+	/// </summary>
+	System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+	/// <summary>
+	/// Required method for Designer support - do not modify
+	/// the contents of this method with the code editor
+	/// </summary>
 		void InitializeComponent(void)
 		{
-			// labels
 			this->labelPatientInformation = (gcnew System::Windows::Forms::Label());
-			// column one labels
 			this->labelFirstName = (gcnew System::Windows::Forms::Label());
 			this->labelLastName = (gcnew System::Windows::Forms::Label());
 			this->labelAdressStreet = (gcnew System::Windows::Forms::Label());
@@ -104,7 +103,6 @@ namespace patientInput {
 			this->labelAddressState = (gcnew System::Windows::Forms::Label());
 			this->labelAddressZip = (gcnew System::Windows::Forms::Label());
 			this->labelPhone = (gcnew System::Windows::Forms::Label());
-			// column two labels
 			this->labelBirthdate = (gcnew System::Windows::Forms::Label());
 			this->labelHeight = (gcnew System::Windows::Forms::Label());
 			this->labelWeight = (gcnew System::Windows::Forms::Label());
@@ -112,12 +110,9 @@ namespace patientInput {
 			this->labelBP = (gcnew System::Windows::Forms::Label());
 			this->labelPainLevel = (gcnew System::Windows::Forms::Label());
 			this->labelSafeHome = (gcnew System::Windows::Forms::Label());
-			// column three labels
 			this->labelAllergies = (gcnew System::Windows::Forms::Label());
 			this->labelMedications = (gcnew System::Windows::Forms::Label());
 			this->labelReasonVisit = (gcnew System::Windows::Forms::Label());
-			// text boxes
-			// column one text boxes
 			this->textBoxFirstName = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxLastName = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxAddressStreet = (gcnew System::Windows::Forms::TextBox());
@@ -125,7 +120,6 @@ namespace patientInput {
 			this->textBoxAddressState = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxAddressZip = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxPhone = (gcnew System::Windows::Forms::TextBox());
-			// column two text boxes
 			this->textBoxBirthdate = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxWeight = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxHeight = (gcnew System::Windows::Forms::TextBox());
@@ -133,11 +127,9 @@ namespace patientInput {
 			this->textBoxBP = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxPainLevel = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxSafeHome = (gcnew System::Windows::Forms::TextBox());
-			// column three text boxes
 			this->textBoxAllergies = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxMedications = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxReasonVisit = (gcnew System::Windows::Forms::TextBox());
-			//buttons
 			this->btnSubmit = (gcnew System::Windows::Forms::Button());
 			this->btnReset = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -438,16 +430,6 @@ namespace patientInput {
 			this->textBoxBirthdate->Size = System::Drawing::Size(150, 26);
 			this->textBoxBirthdate->TabIndex = 7;
 			// 
-			// textBoxHeight
-			// 
-			this->textBoxHeight->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBoxHeight->Location = System::Drawing::Point(479, 149);
-			this->textBoxHeight->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->textBoxHeight->Name = L"textBoxHeight";
-			this->textBoxHeight->Size = System::Drawing::Size(150, 26);
-			this->textBoxHeight->TabIndex = 8;
-			// 
 			// textBoxWeight
 			// 
 			this->textBoxWeight->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -457,6 +439,16 @@ namespace patientInput {
 			this->textBoxWeight->Name = L"textBoxWeight";
 			this->textBoxWeight->Size = System::Drawing::Size(150, 26);
 			this->textBoxWeight->TabIndex = 9;
+			// 
+			// textBoxHeight
+			// 
+			this->textBoxHeight->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBoxHeight->Location = System::Drawing::Point(479, 149);
+			this->textBoxHeight->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->textBoxHeight->Name = L"textBoxHeight";
+			this->textBoxHeight->Size = System::Drawing::Size(150, 26);
+			this->textBoxHeight->TabIndex = 8;
 			// 
 			// textBoxTemp
 			// 
@@ -506,7 +498,6 @@ namespace patientInput {
 			this->textBoxAllergies->Name = L"textBoxAllergies";
 			this->textBoxAllergies->Size = System::Drawing::Size(229, 72);
 			this->textBoxAllergies->TabIndex = 14;
-			//this->textBoxAllergies->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox15_TextChanged);
 			// 
 			// textBoxMedications
 			// 
@@ -552,18 +543,15 @@ namespace patientInput {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(988, 450);
-			// labels
+			this->ClientSize = System::Drawing::Size(988, 566);
 			this->Controls->Add(this->labelPatientInformation);
-			// column one labels
-			this->Controls->Add(this->labelFirstName); 
-			this->Controls->Add(this->labelLastName); 
-			this->Controls->Add(this->labelAdressStreet); 
+			this->Controls->Add(this->labelFirstName);
+			this->Controls->Add(this->labelLastName);
+			this->Controls->Add(this->labelAdressStreet);
 			this->Controls->Add(this->labelAddressCity);
 			this->Controls->Add(this->labelAddressState);
 			this->Controls->Add(this->labelAddressZip);
 			this->Controls->Add(this->labelPhone);
-			// column two labels
 			this->Controls->Add(this->labelBirthdate);
 			this->Controls->Add(this->labelHeight);
 			this->Controls->Add(this->labelWeight);
@@ -571,12 +559,9 @@ namespace patientInput {
 			this->Controls->Add(this->labelBP);
 			this->Controls->Add(this->labelPainLevel);
 			this->Controls->Add(this->labelSafeHome);
-			// colomn three labels
 			this->Controls->Add(this->labelAllergies);
 			this->Controls->Add(this->labelMedications);
 			this->Controls->Add(this->labelReasonVisit);
-			// text boxes
-			// column one text boxes
 			this->Controls->Add(this->textBoxFirstName);
 			this->Controls->Add(this->textBoxLastName);
 			this->Controls->Add(this->textBoxAddressStreet);
@@ -584,7 +569,6 @@ namespace patientInput {
 			this->Controls->Add(this->textBoxAddressState);
 			this->Controls->Add(this->textBoxAddressZip);
 			this->Controls->Add(this->textBoxPhone);
-			// column two text boxes
 			this->Controls->Add(this->textBoxBirthdate);
 			this->Controls->Add(this->textBoxHeight);
 			this->Controls->Add(this->textBoxWeight);
@@ -592,14 +576,11 @@ namespace patientInput {
 			this->Controls->Add(this->textBoxBP);
 			this->Controls->Add(this->textBoxPainLevel);
 			this->Controls->Add(this->textBoxSafeHome);
-			// column three text boxes
 			this->Controls->Add(this->textBoxAllergies);
 			this->Controls->Add(this->textBoxMedications);
 			this->Controls->Add(this->textBoxReasonVisit);
-			// buttons
 			this->Controls->Add(this->btnSubmit);
 			this->Controls->Add(this->btnReset);
-			
 			this->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->Name = L"MyForm";
 			this->Text = L"Patient Information";
@@ -607,46 +588,82 @@ namespace patientInput {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
-// Form submit button click method
-private: System::Void btnSubmit_Click(System::Object^  sender, System::EventArgs^  e) {
-	// Submit Form Actions
-}
 
-// Clear all form text boxes
-private: System::Void Clear(){
-	// text boxes
-	// column one text boxes
-	this->textBoxFirstName->Text = "";
-	this->textBoxLastName->Text = "";
-	this->textBoxAddressStreet->Text = "";
-	this->textBoxAddressCity->Text = "";
-	this->textBoxAddressState->Text = "";
-	this->textBoxAddressZip->Text = "";
-	this->textBoxPhone->Text = "";
-	// column two text boxes
-	this->textBoxBirthdate->Text = "";
-	this->textBoxWeight->Text = "";
-	this->textBoxHeight->Text = "";
-	this->textBoxTemp->Text = "";
-	this->textBoxBP->Text = "";
-	this->textBoxPainLevel->Text = "";
-	this->textBoxSafeHome->Text = "";
-	// column three text boxes
-	this->textBoxAllergies->Text = "";
-	this->textBoxMedications->Text = "";
-	this->textBoxReasonVisit->Text = "";
+		// Form submit button click method
 
-	this->btnSubmit->Enabled = true;
-	this->btnReset->Enabled = true;
-}
+	private: System::Void btnSubmit_Click(System::Object^  sender, System::EventArgs^  e) {
+		// column one text boxes
+		std::string firstName = msclr::interop::marshal_as<std::string>(textBoxFirstName->Text);
+		std::string lastName = msclr::interop::marshal_as<std::string>(textBoxLastName->Text);
+		std::string addressStreet = msclr::interop::marshal_as<std::string>(textBoxAddressStreet->Text);
+		std::string addressCity = msclr::interop::marshal_as<std::string>(textBoxAddressCity->Text);
+		std::string addressState = msclr::interop::marshal_as<std::string>(textBoxAddressState->Text);
+		std::string addressZip = msclr::interop::marshal_as<std::string>(textBoxAddressZip->Text);
+		std::string phone = msclr::interop::marshal_as<std::string>(textBoxPhone->Text);
+		// column two text boxes
+		std::string birthdate = msclr::interop::marshal_as<std::string>(textBoxBirthdate->Text);
+		std::string height = msclr::interop::marshal_as<std::string>(textBoxHeight->Text); 
+		std::string weight = msclr::interop::marshal_as<std::string>(textBoxWeight->Text);
+		std::string temp = msclr::interop::marshal_as<std::string>(textBoxTemp->Text); 
+		std::string bp = msclr::interop::marshal_as<std::string>(textBoxBP->Text);
+		std::string painLevel = msclr::interop::marshal_as<std::string>(textBoxPainLevel->Text);
+		std::string safeHome = msclr::interop::marshal_as<std::string>(textBoxSafeHome->Text);
+		// column three text boxes
+		std::string allergies = msclr::interop::marshal_as<std::string>(textBoxAllergies->Text);
+		std::string medications = msclr::interop::marshal_as<std::string>(textBoxMedications->Text);
+		std::string reasonVisit = msclr::interop::marshal_as<std::string>(textBoxReasonVisit->Text);
+		
+		Patient patient = Patient(firstName, lastName, addressStreet, addressCity, addressState, addressZip, 
+			phone, birthdate, height, weight, temp, bp, painLevel, safeHome, allergies, medications, reasonVisit);
 
-// Form reset button click method
-private: System::Void btnReset_Click(System::Object^  sender, System::EventArgs^  e) {
-	Clear();
-}
+		patient.printPatient();	
 
-//private: System::Void textBox15_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-//}
-};
+		Clear();
+	}
+
+
+
+			 // Clear all form text boxes
+
+	private: System::Void Clear() {
+		// text boxes
+		// column one text boxes
+		this->textBoxFirstName->Text = "";
+		this->textBoxLastName->Text = "";
+		this->textBoxAddressStreet->Text = "";
+		this->textBoxAddressCity->Text = "";
+		this->textBoxAddressState->Text = "";
+		this->textBoxAddressZip->Text = "";
+		this->textBoxPhone->Text = "";
+		// column two text boxes
+		this->textBoxBirthdate->Text = "";
+		this->textBoxWeight->Text = "";
+		this->textBoxHeight->Text = "";
+		this->textBoxTemp->Text = "";
+		this->textBoxBP->Text = "";
+		this->textBoxPainLevel->Text = "";
+		this->textBoxSafeHome->Text = "";
+		// column three text boxes
+		this->textBoxAllergies->Text = "";
+		this->textBoxMedications->Text = "";
+		this->textBoxReasonVisit->Text = "";
+
+		this->btnSubmit->Enabled = true;
+		this->btnReset->Enabled = true;
+	}
+
+
+
+			 // Form reset button click method
+
+	private: System::Void btnReset_Click(System::Object^  sender, System::EventArgs^  e) {
+
+		Clear();
+
+	}
+
+	};
+
 }
