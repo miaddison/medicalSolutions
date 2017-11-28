@@ -1,2 +1,6 @@
-﻿  patientInput.vcxproj -> C:\DMACC\Fall 2017\Adv. C++\medicalSolutions-miaddison-3\patientInput\x64\Debug\patientInput.exe
-  patientInput.vcxproj -> C:\DMACC\Fall 2017\Adv. C++\medicalSolutions-miaddison-3\patientInput\x64\Debug\patientInput.pdb (Partial PDB)
+﻿  MyForm.cpp
+  Patient.cpp
+  Generating Code...
+  MyForm.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  patientInput.vcxproj -> C:\GitHub_Repositories\medicalSolutions\patientInput\x64\Debug\patientInput.exe
+  patientInput.vcxproj -> C:\GitHub_Repositories\medicalSolutions\patientInput\x64\Debug\patientInput.pdb (Partial PDB)
