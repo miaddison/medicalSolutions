@@ -105,37 +105,81 @@ std::string Patient::getAllergies() { return allergies; }
 std::string Patient::getMedications() { return medications; }
 std::string Patient::getReasonVisit() { return reasonVisit; }
 
-void Patient::printPatient() {
+bool Patient::fileExists(const std::string& filename)
+{
+	struct stat buf;
+	if (stat(filename.c_str(), &buf) != -1)
+	{
+		return true;
+	}
+	return false;
+}
+
+void Patient::printHeaders() {
 
 	std::ofstream patientsFile;
 
-	patientsFile.open("Patients.txt", std::ios::out | std::ios::app);
+	patientsFile.open("Patients.txt", std::ios::out);
 	// Column one
-	patientsFile << left << setw(25) << getFirstName();
-	patientsFile << left << setw(25) << getLastName();
-	patientsFile << left << setw(25) << getAddressStreet();
-	patientsFile << left << setw(25) << getAddressCity();
-	patientsFile << left << setw(25) << getAddressState();
-	patientsFile << left << setw(25) << getAddressZip();
-	patientsFile << left << setw(15) << getPhone();
+	patientsFile << left << setw(25) << "First Name";
+	patientsFile << left << setw(25) << "Last Name";
+	patientsFile << left << setw(25) << "Address";
+	patientsFile << left << setw(25) << "City";
+	patientsFile << left << setw(25) << "State";
+	patientsFile << left << setw(25) << "Zip Code";
+	patientsFile << left << setw(20) << "Phone Number";
 	// Column two
-	patientsFile << left << setw(20) << getBirthDate();
-	patientsFile << left << setw(8) << getHeight();
-	patientsFile << left << setw(8) << getWeight();
-	patientsFile << left << setw(8) << getTemp();
-	patientsFile << left << setw(10) << getBP();
-	patientsFile << left << setw(5) << getPainLevel();
-	patientsFile << left << setw(100) << getSafeHome();
+	patientsFile << left << setw(20) << "Birthdate";
+	patientsFile << left << setw(10) << "Height";
+	patientsFile << left << setw(10) << "Weight";
+	patientsFile << left << setw(15) << "Temperature";
+	patientsFile << left << setw(20) << "Blood Pressure";
+	patientsFile << left << setw(15) << "Pain Level";
+	patientsFile << left << setw(50) << "Safe In Home?";
 	// Column three
-	patientsFile << left << setw(100) << getAllergies();
-	patientsFile << left << setw(100) << getMedications();
-	patientsFile << left << setw(100) << getReasonVisit();
+	patientsFile << left << setw(50) << "Allergies";
+	patientsFile << left << setw(50) << "Medications";
+	patientsFile << left << setw(50) << "Reason for Visit";
 
 	patientsFile << endl;
 
 	patientsFile.close();
+}
 
-	cout << "patient info entered." << endl;
+void Patient::printPatient() {
+
+	std::string file = "patientsFile";
+
+	if (fileExists(file) != true) {
+		printHeaders();
+	}
+
+		std::ofstream patientsFile;
+
+		patientsFile.open("Patients.txt", std::ios::out | std::ios::app);
+		// Column one
+		patientsFile << left << setw(25) << getFirstName() << left << setw(25) << getLastName()
+		<< left << setw(25) << getAddressStreet();
+		patientsFile << left << setw(25) << getAddressCity();
+		patientsFile << left << setw(25) << getAddressState();
+		patientsFile << left << setw(25) << getAddressZip();
+		patientsFile << left << setw(15) << getPhone();
+		patientsFile << left << setw(20) << getBirthDate();
+		patientsFile << left << setw(8) << getHeight();
+		patientsFile << left << setw(8) << getWeight();
+		patientsFile << left << setw(8) << getTemp();
+		patientsFile << left << setw(10) << getBP();
+		patientsFile << left << setw(5) << getPainLevel();
+		patientsFile << left << setw(100) << getSafeHome();
+		patientsFile << left << setw(100) << getAllergies();
+		patientsFile << left << setw(100) << getMedications();
+		patientsFile << left << setw(100) << getReasonVisit();
+
+		patientsFile << endl;
+
+		patientsFile.close();
+
+		cout << "patient info entered." << endl;
 
 }
 

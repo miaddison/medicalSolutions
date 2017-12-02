@@ -739,10 +739,11 @@ namespace patientInput {
 			this->lblConfirmationMessage->Size = System::Drawing::Size(335, 25);
 			this->lblConfirmationMessage->TabIndex = 42;
 			this->lblConfirmationMessage->Text = L"Patient has successfully been added!";
+			this->lblConfirmationMessage->Visible = false;
 			// 
 			// btnNewPatient
 			// 
-			this->btnNewPatient->Location = System::Drawing::Point(156, 493);
+			this->btnNewPatient->Location = System::Drawing::Point(466, 570);
 			this->btnNewPatient->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btnNewPatient->Name = L"btnNewPatient";
 			this->btnNewPatient->Size = System::Drawing::Size(125, 65);
@@ -754,7 +755,7 @@ namespace patientInput {
 			// 
 			// btnClose
 			// 
-			this->btnClose->Location = System::Drawing::Point(638, 570);
+			this->btnClose->Location = System::Drawing::Point(639, 570);
 			this->btnClose->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btnClose->Name = L"btnClose";
 			this->btnClose->Size = System::Drawing::Size(125, 65);
@@ -996,10 +997,35 @@ namespace patientInput {
 	private: System::Void btnConfirm_Click(System::Object^  sender, System::EventArgs^  e) {
 		btnConfirm->Hide();
 		btnModify->Hide();
-
 		lblConfirmationMessage->Visible = true;
 		btnNewPatient->Visible = true;
 		btnClose->Visible = true;
+
+		// column one text boxes
+		std::string firstName = msclr::interop::marshal_as<std::string>(textBoxFirstName->Text);
+		std::string lastName = msclr::interop::marshal_as<std::string>(textBoxLastName->Text);
+		std::string addressStreet = msclr::interop::marshal_as<std::string>(textBoxAddressStreet->Text);
+		std::string addressCity = msclr::interop::marshal_as<std::string>(textBoxAddressCity->Text);
+		std::string addressState = msclr::interop::marshal_as<std::string>(textBoxAddressState->Text);
+		std::string addressZip = msclr::interop::marshal_as<std::string>(textBoxAddressZip->Text);
+		std::string phone = msclr::interop::marshal_as<std::string>(textBoxPhone->Text);
+		// column two text boxes
+		std::string birthdate = msclr::interop::marshal_as<std::string>(textBoxBirthdate->Text);
+		std::string height = msclr::interop::marshal_as<std::string>(textBoxHeight->Text);
+		std::string weight = msclr::interop::marshal_as<std::string>(textBoxWeight->Text);
+		std::string temp = msclr::interop::marshal_as<std::string>(textBoxTemp->Text);
+		std::string bp = msclr::interop::marshal_as<std::string>(textBoxBP->Text);
+		std::string painLevel = msclr::interop::marshal_as<std::string>(textBoxPainLevel->Text);
+		std::string safeHome = msclr::interop::marshal_as<std::string>(textBoxSafeHome->Text);
+		// column three text boxes
+		std::string allergies = msclr::interop::marshal_as<std::string>(textBoxAllergies->Text);
+		std::string medications = msclr::interop::marshal_as<std::string>(textBoxMedications->Text);
+		std::string reasonVisit = msclr::interop::marshal_as<std::string>(textBoxReasonVisit->Text);
+
+		Patient patient = Patient(firstName, lastName, addressStreet, addressCity, addressState, addressZip,
+			phone, birthdate, height, weight, temp, bp, painLevel, safeHome, allergies, medications, reasonVisit);
+
+		patient.printPatient();
 	}
 
 	//Modify button click method

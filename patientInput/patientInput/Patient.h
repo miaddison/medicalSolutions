@@ -64,12 +64,8 @@ public:
 	std::string getMedications();
 	std::string getReasonVisit();
 	
-	
-
-	
-
-
-
+	bool fileExists(const std::string&);
+	void printHeaders();
 	void printPatient();
 
 };
